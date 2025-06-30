@@ -1,4 +1,4 @@
-]633;E;{\x0agrep -B 1000 "yap_testing" .gitignore | head -n -1\x3b   \x0aecho -e "\\n# Правильные исключения\\nhtml/\\n.mypy_cache/"\x3b } > .gitignore.tmp && mv .gitignore.tmp .gitignore;bf3780ea-c0fc-4f4b-8fb6-b89c8583ec21]633;C]633;E;{\x0ahead -n -5 .gitignore\x3b   \x0aecho -e "\\n# Очищенные правила\\nhtml/\\n.mypy_cache/"\x3b } > .gitignore.tmp && mv .gitignore.tmp .gitignore;bf3780ea-c0fc-4f4b-8fb6-b89c8583ec21]633;C]633;E;{\x0agrep -v -e '^html/img/img/$' -e '^(venv)$' .gitignore | uniq\x3b   \x0aecho -e "\\n# Cleaned rules\\nhtml/\\n.mypy_cache/"\x3b } > .gitignore.tmp && mv .gitignore.tmp .gitignore;bf3780ea-c0fc-4f4b-8fb6-b89c8583ec21]633;C# Byte-compiled / optimized / DLL files 
+# Byte-compiled / optimized / DLL files 
 __pycache__/ 
 *.py[cod] 
 *$py.class 
@@ -141,20 +141,16 @@ dmypy.json
 *.code-workspace 
  
 # Local History for Visual Studio Code 
-.history/ 
- 
-.mypy_cache 
- 
+.history/
+
 # папки со статикой и медиа 
 media/ 
  
 # Testing 
 build_tests/ 
+yap_testing 
+html/img/img/
 
-# Правильные исключения
-html/
-.mypy_cache/
-
-# Исключаемые папки
+# Игнорируемые папки
 html/
 .mypy_cache/
