@@ -1,0 +1,11 @@
+{% block content %}
+  <h1 class="mb-4">Лента записей</h1>
+  
+  {% for post in posts|dictsortreversed:"id" %}
+    {% if not forloop.first %}
+      <hr class="my-4">
+    {% endif %}
+    
+    {% include "blog/includes/post.html" with post=post detail=False %}
+  {% endfor %}
+{% endblock %}
